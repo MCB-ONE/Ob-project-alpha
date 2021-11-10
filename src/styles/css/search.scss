@@ -1,0 +1,49 @@
+@import "./colors";
+@import "./breakPoints";
+
+/**Styles*/
+.search{        
+    display: flex;
+    gap: 25px;
+    @media (min-width: $breakpoint-desktop) {
+        width: 80%;
+    }
+    @media (min-width: $breakpoint-fullHD) {
+        width: 50%;
+    }   
+    .search-bar{
+        position: relative;
+        flex-basis: 80%;
+        @media (min-width: $breakpoint-desktop) {
+            flex-basis: 75%;
+        }
+
+        .bi {
+            position: absolute;
+            top: 30%;
+            left: 5%;
+            color: $color-violet;
+        }
+        .form-input{
+            text-indent: 33px;
+            border-radius: 10px;
+            background-color: unset;
+            border-color: $color-blue;
+
+            &::placeholder{
+            color: hsla(238, 57%, 50%, 0.151);
+            }
+        }
+        
+        input:focus {
+            box-shadow: 0 0 4px 0.2rem #171b9759;
+            border: #6367ca;
+            
+        }
+    }
+    .filter-icon{
+        img{
+            width: 40px;
+        }
+    }
+}

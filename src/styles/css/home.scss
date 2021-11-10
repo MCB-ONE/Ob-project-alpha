@@ -1,0 +1,51 @@
+@import "./colors";
+@import "./breakPoints";
+
+.home {
+    margin-top: 100px;
+    @media (min-width: $breakpoint-tablet) {
+        margin-top: 60px;
+    }
+
+    .title-wrapper{  
+        margin-bottom: 2rem;
+        .big-title{
+            font-size: 30px;
+            line-height: 32px;
+        }
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+        background-image: url('../../../public/images/homeBg.png');
+        background-repeat: no-repeat;
+        background-size: 110%;
+        background-position-x: -70px;
+        margin-bottom: 4rem;
+        .navbar {
+            position: absolute;
+            width: 95%;
+        }
+        .title-wrapper{  
+            margin: 5rem 0 4rem;
+            .big-title{
+                font-size: 48px;
+                line-height: 48px;
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-fullHD) {
+        background-position-x: -120px;
+        .navbar {
+            position: absolute;
+            width: 95%;
+        }
+        .title-wrapper{  
+            margin: 9rem 0 7rem;
+            .big-title{
+                font-size: 66px;
+                line-height: 66px;
+            }
+        }
+    }
+}

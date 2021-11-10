@@ -1,0 +1,51 @@
+@import "./colors";
+@import "./breakPoints";
+
+
+.MuiToolbar-regular{
+    justify-content: space-between !important;
+}
+.navBrand{
+    flex-grow: 0;
+    cursor: pointer;
+    img{
+        width: 42px;
+    }
+    .text-logo{
+        font-size: 22px;
+        letter-spacing: .02rem;
+        float: right;
+        color: $color-violet--light;
+        line-height: 22px;
+        margin-bottom: 0;
+        margin-left: 5px;
+        font-weight: 700;
+    }
+}
+.MuiListItem-button, .MuiButton-root {
+    &:hover,
+    &:active {
+        background-color: #372d4c  !important;
+    }
+}
+.MuiListItemIcon-root{
+    min-width: 30px !important;
+    color: inherit !important;
+}
+
+.MuiButton-contained{
+    background-color: $color-violet--light !important;
+    color: $color-violet--dark---grey !important;
+    &:hover{
+        background: none  !important;
+        border: 1px solid $color-violet--light !important;
+        color: $color-violet--light !important;
+    }
+}
+.MuiButton-outlined{
+    &:hover {
+        background-color: $color-violet--light !important;
+        color: $color-violet--dark---grey !important;
+        border: none !important;
+    }
+}

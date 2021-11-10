@@ -1,0 +1,26 @@
+@import "./colors";
+@import "./breakPoints";
+
+.offers-list-container {
+    @media (min-width: $breakpoint-tablet) {
+        h2 {
+            margin-left: 1rem;
+        }
+    }
+    @media (min-width: $breakpoint-fullHD) {
+        margin-top: 2rem;
+        h2 {
+            margin-left: 1rem;
+        }
+    }
+    .offers-list {
+        justify-content: center;
+        @media (min-width: $breakpoint-tablet) {
+            width: 95%;
+            margin: 0 auto;
+            justify-content: space-between;
+            gap: 20px;
+        }
+    }
+
+}

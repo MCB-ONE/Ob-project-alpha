@@ -1,0 +1,77 @@
+@import "./colors";
+@import "./breakPoints";
+
+.offer-detail{
+    font-size: 18px;
+    @media (min-width: $breakpoint-tablet) {
+        width: 60%;
+        padding: 1rem 0.4rem 3rem;
+        background-color: #F3F4FF;
+        border-radius: 15px;
+    }
+    .company-logo{
+        img{
+            width: 35%;
+            border-radius: 10px;
+            box-shadow: #1c1c1c33 0px 10px 10px 5px;
+            @media (min-width: $breakpoint-tablet) {
+                width: 100%;
+                box-shadow: none;
+            }
+        }
+    }
+
+    .summary{
+        margin-bottom: 2rem;
+        text-align: center;
+        @media (min-width: $breakpoint-tablet) {
+            text-align: left;
+        }
+
+        .offer-name{
+            font-weight: 700;            
+        }
+        .offer-address{
+            font-weight: 500;
+        }
+    }
+
+    .content{
+        margin-top: 1em;
+        @media (min-width: $breakpoint-tablet) {
+            padding: 0rem 3rem;
+        }
+        .content-title{
+            font-weight: 600
+        }
+    }
+
+    .featured{
+        .feature{
+            display: inline-block;
+        }
+        svg{
+            font-size: 22px;
+            vertical-align: sub;
+            margin-right: 5px;
+        }
+    }
+    .tech{
+        @media (min-width: $breakpoint-tablet) {
+            width: fit-content;
+        }
+        img{
+            width: 60px;
+        }
+    }
+
+    .divider{
+        border-top: 1px solid $color-violet--dark---grey;
+    }
+
+    .vertical-separator{
+            margin-left: 10px;
+            padding-left: 10px;
+            border-left: 1px groove $color-violet--dark---grey;
+    }
+}

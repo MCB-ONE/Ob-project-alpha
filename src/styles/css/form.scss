@@ -1,0 +1,44 @@
+@import "./colors";
+@import "./breakPoints";
+
+.primary-form{
+    width: 100%;
+    font-size: 18px;
+    padding: 2rem;
+    background-color: #F3F4FF;
+    border-radius: 5px;
+    box-shadow: #0000001a 0px 7px 8px 5px;
+    
+    @media (min-width: $breakpoint-tablet) {
+        margin: 0 auto;
+        width: 50%;
+    }
+    .form-icon {
+        font-size: 34px;
+        vertical-align: text-bottom;
+        margin-left: 5px;
+    }  
+
+    .form-control{
+        border: none;
+        background: none;
+        border-bottom: 2px solid #bcbdd4;
+        &:focus{
+            box-shadow: none;
+            border-bottom: 2px solid #8f91b3;
+        }
+    }
+    .form-error{
+        padding-left: 5px;
+        font-size: 16px;
+        color: rgb(255, 50, 94)
+    }
+
+    .loader-container{
+        height: 100px;
+        .sk-chase{
+            top: 50%;
+            left: 45%;
+        }
+    }
+}
