@@ -1,12 +1,18 @@
-import { API_CALL_FAILURE, API_CALL_REQUEST, API_CALL_SUCCESS } from '../actions/offersActions';
+import * as actionTypes from '../actions/offersActionTypes';
 
-// Initial state for offers state
+// Initial offers state
 const initialState = {
-    // To check if the request is being made
-    fetching: false,
-    offerList: [],
-    error: null,
+  data: null,
+  /* showSuccessModal: false, */
 };
+
+const executeGetDataSuccess = (state, action) => {
+  return {
+      ...state,
+      data: action.data,
+  };
+};
+
 /**
  * This is a reducer for control the offers state
  * @param {object} offers initial state
@@ -15,31 +21,10 @@ const initialState = {
  */
  const offersReducer = (state = initialState, action) => {
     switch (action.type) {
-        case API_CALL_REQUEST:
-            return {
-                ...state,
-                fetching: true,
-                offerList: null,
-                error: null,
-            };
-
-        case API_CALL_SUCCESS:
-            return {
-                ...state,
-                fetching: false,
-                offerList: action.payload.offerList,
-                error: null,
-            };
-
-        case API_CALL_FAILURE:
-            return {
-                ...state,
-                fetching: false,
-                offerList: null,
-                error: action.payload.error,
-            };
+        case actionTypes.GET_DATA_SUCCESS:
+          return executeGetDataSuccess(state, action);
         default:
-            return state;
+          return state;
     }
 };
 
