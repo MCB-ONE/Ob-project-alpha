@@ -1,21 +1,26 @@
 // Imports de React
 import React from 'react';
 import ReactDOM from 'react-dom';
+// Redux Imports:
+import { Provider } from 'react-redux';
 
-// Imports de Redux
 // import { Provider } from 'react-redux';
-
 import App from './components/App';
+// Import funtion to create store
+import createAppAsyncStore from './store/config/store.config';
 
 // Importamos las hojas de estilos
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/css/index.scss';
 
-// TODO: Si trabajamos con Redux, crear el Store y aplicar el middleware de Redux Saga
+// We create the app store
+// eslint-disable-next-line prefer-const
+let appAsyncStore = createAppAsyncStore();
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={appAsyncStore}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Provider>,
     document.getElementById('root'),
 );

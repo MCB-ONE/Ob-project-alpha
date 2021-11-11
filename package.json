@@ -40,6 +40,7 @@
     "mini-css-extract-plugin": "^2.4.3",
     "node-sass": "^6.0.1",
     "react-svg-loader": "^3.0.3",
+    "redux-devtools-extension": "^2.13.9",
     "sass-loader": "^12.3.0",
     "source-map-loader": "^3.0.0",
     "style-loader": "^3.3.1",

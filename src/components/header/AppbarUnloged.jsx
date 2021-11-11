@@ -92,7 +92,7 @@ export default function AppbarUnloged() {
       <AppBar elevation={0}>
         <Toolbar>
           <div className="navBrand">
-            <Nav.Link as={Link} to="/home" className="p-0">
+            <Nav.Link as={Link} to="/" className="p-0">
               <img src={Logo} alt="Logo Open Talent" />
               <h1 className="text-logo">
                 Opent
